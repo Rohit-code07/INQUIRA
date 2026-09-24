@@ -7,24 +7,8 @@ The project features a Python-based FastAPI backend powered by LangChain and mul
 ## 🏗️ System Architecture
 
 The core of the system is a multi-stage AI pipeline where specialized agents sequentially process information to produce a high-quality research report.
+<img width="1536" height="1024" alt="ChatGPT Image Sep 24, 2026, 06_05_03 AM" src="https://github.com/user-attachments/assets/c5737380-6a09-4d90-8790-2d509bea53fb" />
 
-```mermaid
-flowchart TD
-    User([User Request]) --> API[FastAPI Backend]
-    API --> SearchAgent[Search Agent]
-    
-    subgraph Multi-Agent Pipeline
-        SearchAgent -->|Web Search Results| ReaderAgent[Reader Agent]
-        ReaderAgent -->|Scraped Web Content| WriterAgent[Writer Agent]
-        WriterAgent -->|Draft Research Report| CriticAgent[Critic Agent]
-    end
-    
-    SearchAgent -.-> |Tavily API| Web(Web Search)
-    ReaderAgent -.-> |BeautifulSoup| Scrape(Web Scraping)
-    
-    CriticAgent -->|Final Report & Critic Feedback| API
-    API --> Frontend[React Frontend]
-```
 
 ### Component Breakdown
 
