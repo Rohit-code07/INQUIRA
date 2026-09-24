@@ -1,19 +1,65 @@
-# Python-generated files
+# =========================
+# Python
+# =========================
 __pycache__/
 *.py[cod]
-
-# Build / distribution
-build/
-dist/
-wheels/
-*.egg-info/
+*$py.class
+*.pyo
 
 # Virtual environments
 .venv/
 venv/
 env/
+ENV/
 
 # Environment variables / secrets
 .env
 .env.*
 !.env.example
+
+# =========================
+# FastAPI / Python tooling
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Node / React / Vite
+# =========================
+node_modules/
+dist/
+build/
+.vite/
+*.local
+
+# =========================
+# IDEs
+# =========================
+.idea/
+.vscode/
+*.iml
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.swp
